@@ -1,0 +1,75 @@
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+}
+
+.d-none {
+    display: none;
+}
+
+.plusButton {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #26405c;
+    border: none;
+    z-index: 2;
+    border-radius: 100%;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+    margin: 15px;
+    cursor: pointer;
+    transition: 30ms ease-in-out;
+    img {
+        margin: 7px;
+        margin-top: 10px;
+        height: 25px;
+        width: 20px;
+        filter: invert(100%);
+        object-fit: contain;
+    }
+    &:active {
+        filter: brightness(150%);
+        transition: 30ms ease-in-out;
+    }
+}
+
+#dialogAddUser {
+    padding: 0px;
+}
+
+#dialogAddUserBG {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+#dialogAddUser.slideOpenDialog {
+    animation: slideOpenDialog 500ms ease-in-out;
+}
+#dialogAddUser.slideCloseDialog {
+    animation: slideCloseDialog 500ms ease-in-out;
+}
+@keyframes slideOpenDialog {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideCloseDialog {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200%);
+    }
+}

@@ -1,0 +1,143 @@
+#navbar {
+    height: 10vh;
+    width: 100vw;
+    background-color: #26405c;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    img {
+        height: 35px;
+        width: auto;
+        filter: invert(100%);
+    }
+    button {
+        margin-left: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: 50ms ease-in-out;
+        &:active {
+            filter: invert(20%);
+            transition: 50ms ease-in-out;
+        }
+    }
+}
+
+.navbarTitle {
+    color: white;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+#navbarMenu {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100vh;
+    width: 20vw;
+    background-color: white;
+    transition: 225ms ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    ul {
+        padding-left: 0px;
+    }
+    li {
+        list-style-type: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color: hsla(0, 0%, 0%, 0.03);
+        }
+        &:active {
+            background-color: hsla(0, 100%, 50%, 0.1);
+        }
+    }
+    img {
+        height: 20px;
+        width: auto;
+        padding-right: 16px;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+#routerContainer {
+    width: 100vw;
+    margin-left: 0vw;
+}
+
+.slideOpenMenu {
+    animation: slideOpenMenu 225ms ease-in-out;
+}
+@keyframes slideOpenMenu {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slideCloseMenu {
+    animation: slideCloseMenu 225ms ease-in-out;
+}
+@keyframes slideCloseMenu {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#navbar.slideOpenContent {
+    animation: slideOpenContent 225ms ease-in-out;
+}
+#routerContainer.slideOpenContent {
+    animation: slideOpenContent 225ms ease-in-out;
+}
+@keyframes slideOpenContent {
+    from {
+        width: 100vw;
+        margin-left: 0vw;
+    }
+    to {
+        width: 80vw;
+        margin-left: 20vw;
+    }
+}
+
+#navbar.slideCloseContent {
+    animation: slideCloseContent 225ms ease-in-out;
+}
+#routerContainer.slideCloseContent {
+    animation: slideCloseContent 225ms ease-in-out;
+}
+@keyframes slideCloseContent {
+    from {
+        width: 80vw;
+        margin-left: 20vw;
+    }
+    to {
+        width: 100vw;
+        margin-left: 0vw;
+    }
+}
+
+.logoMain {
+    height: 10vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    img {
+        height: 80px !important;
+        width: auto;
+    }
+}

@@ -1,0 +1,20 @@
+<div class="dialogAddUserContent">
+    <div class="dialogAddUserRender">
+        <h2>Add User</h2>
+        <div class="flexrow">
+            <input [(ngModel)]="user.firstName" type="text" name="" id="" placeholder="First Name">
+            <input [(ngModel)]="user.lastName" type="text" name="" id="" placeholder="Last Name">
+        </div>
+        <input [(ngModel)]="user.email" type="email" name="email" id="" placeholder="e-mail">
+        <input [(ngModel)]="user.birthDate" type="date" name="date" id="" placeholder="birthdate">
+        <input [(ngModel)]="user.street" type="text" name="" id="" placeholder="Please enter a adress">
+        <div class="flexrow">
+            <input [(ngModel)]="user.city" type="text" name="" id="" placeholder="City">
+            <input [(ngModel)]="user.zipCode" type="text" name="" id="" placeholder="Zip Code">
+        </div>
+        <div class="flexrow">
+            <button>Cancel</button>
+            <button (click)="saveUser()">Start</button>
+        </div>
+    </div>
+</div>

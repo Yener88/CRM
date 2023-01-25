@@ -1,0 +1,24 @@
+<div id="navbar">
+    <button (click)="openAndCloseNavbar()">
+        <img src="assets/img/navbarButton.png" alt="Navbar Icon">
+    </button>
+    <span class="navbarTitle">SIMPLE CRM</span>
+</div>
+<div id="navbarMenu" class="d-none">
+    <div class="logoMain">
+        <img src="assets/img/logoMain.png" alt="Main Logo Icon">
+    </div>
+    <ul>
+        <li routerLink="/">
+            <img src="assets/img/dashboardIcon.png" alt="Dashboard Icon">
+            Dashboard
+        </li>
+        <li routerLink="/user">
+            <img src="assets/img/userIcon.png" alt="User Icon">
+            User
+        </li>
+    </ul>
+</div>
+<div id="routerContainer">
+    <router-outlet></router-outlet>
+</div>

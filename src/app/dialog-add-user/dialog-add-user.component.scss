@@ -1,0 +1,43 @@
+.dialogAddUserContent {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 460px;
+    width: 45vw;
+    margin: 30px;
+    z-index: 2;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0px 15px 15px rgb(0 0 0 / 20%), 0 15px 15px rgb(0 0 0 / 14%), 0 1px 18px rgb(0 0 0 / 12%);
+}
+
+.dialogAddUserRender {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    input {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    button {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.flexrow {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    input {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
